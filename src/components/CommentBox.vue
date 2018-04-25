@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <div class="comment-form">
-      <input placeholder="请填写评论" />
+      <input v-model="msg" placeholder="请填写评论" />
       <button @click="handleClick">提交</button>
     </div>
    
@@ -15,6 +15,7 @@
 export default {
   name: 'CommentBox',
   data: () => ({
+    msg: '',
     comments: [
       {
         id: '1',
@@ -32,8 +33,9 @@ export default {
     }
   },
   methods: {
-    handleClick: () => {
-      console.log('clicked')
+    handleClick: function() {
+      console.log('clicked', this.msg)
+      this.msg = ''
     }
   }
 }
