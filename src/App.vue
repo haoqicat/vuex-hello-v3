@@ -1,14 +1,24 @@
 <template>
   <div>
-    <HelloWorld />
+    <Post />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Post from './components/Post'
 export default {
   components: {
-    HelloWorld
+    Post
   }
 }
 </script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+</style>
