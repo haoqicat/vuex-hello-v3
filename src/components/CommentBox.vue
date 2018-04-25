@@ -16,25 +16,22 @@ export default {
   name: 'CommentBox',
   data: () => ({
     msg: '',
-    comments: [
-      {
-        id: '1',
-        body: 'cool'
-      },
-      {
-        id: '2',
-        body: 'very cool'
-      }
-    ]
+    comments: []
   }),
   computed: {
     reversedComments: function() {
-      return this.comments.reverse()
+      return this.comments.slice().reverse()
     }
   },
   methods: {
     handleClick: function() {
-      console.log('clicked', this.msg)
+      this.comments = [
+        ...this.comments,
+        {
+          id: (this.comments.length + 1).toString(),
+          body: this.msg
+        }
+      ]
       this.msg = ''
     }
   }
@@ -44,7 +41,6 @@ export default {
 
 <style scoped>
 .wrap {
-  border: 2px solid #53a6ae;
   height: 100px;
   width: 400px;
   margin: 20px auto;
