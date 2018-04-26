@@ -11,6 +11,14 @@ const state = {
   ]
 }
 
+const mutations = {
+  addComment(state, comment) {
+    console.log('in mutation', comment)
+    state.all.push(comment)
+  }
+}
+
 export default {
-  state
+  state,
+  mutations
 }

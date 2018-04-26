@@ -27,13 +27,11 @@ export default {
   },
   methods: {
     handleClick: function() {
-      this.comments = [
-        ...this.comments,
-        {
-          id: (this.comments.length + 1).toString(),
-          body: this.msg
-        }
-      ]
+      const comment = {
+        id: (this.comments.length + 1).toString(),
+        body: this.msg
+      }
+      this.$store.commit('addComment', comment)
       this.msg = ''
     }
   }
