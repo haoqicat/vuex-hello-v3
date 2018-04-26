@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
-      <PostBody />
+      <PostBody title="Git Tips" />
     </div>
     <div class="bottom">
       <CommentBox />

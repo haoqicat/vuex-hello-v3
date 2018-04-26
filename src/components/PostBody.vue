@@ -1,11 +1,12 @@
 <template>
   <div class="wrap">
-    PostBody
+    {{ title }}
   </div>
 </template>
 
 <script>
 export default {
+  props: ['title'],
   name: 'PostBody'
 }
 </script>
