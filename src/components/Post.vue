@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
-      <PostBody title="Git Tips" />
+      <PostBody :title="title" />
     </div>
     <div class="bottom">
       <CommentBox />
@@ -14,6 +14,9 @@ import PostBody from './PostBody'
 import CommentBox from './CommentBox'
 export default {
   name: 'Post',
+  data: () => ({
+    title: 'Git Tricks'
+  }),
   components: {
     PostBody,
     CommentBox
