@@ -18,10 +18,10 @@ export default {
     msg: ''
   }),
   computed: {
-    comments: function() {
+    comments() {
       return this.$store.state.comment.all
     },
-    reversedComments: function() {
+    reversedComments() {
       return this.comments.slice().reverse()
     }
   },
