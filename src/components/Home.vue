@@ -1,7 +1,8 @@
 <template>
   <div>
     HOME
-    <router-link to="/post">文章</router-link>
+    <router-link to="/post/1">文章1</router-link>
+    <router-link to="/post/2">文章2</router-link>
   </div>
 </template>
 

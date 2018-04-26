@@ -1,6 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
+      {{ postId }}
       <PostBody :title="title" />
     </div>
     <div class="bottom">
@@ -20,6 +21,11 @@ export default {
   components: {
     PostBody,
     CommentBox
+  },
+  computed: {
+    postId: function() {
+      return this.$route.params.id
+    }
   }
 }
 </script>
