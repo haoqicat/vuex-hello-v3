@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Post />
+    <router-view></router-view>
   </div>
 </template>
 
