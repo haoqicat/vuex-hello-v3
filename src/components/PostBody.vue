@@ -1,6 +1,8 @@
 <template>
   <div class="wrap">
-    {{ title }}
+    <div class="title">
+      {{ title }}
+    </div>
   </div>
 </template>
 
@@ -17,5 +19,14 @@ export default {
   margin: 20px auto;
   width: 400px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
 </style>
