@@ -15,10 +15,12 @@
 export default {
   name: 'CommentBox',
   data: () => ({
-    msg: '',
-    comments: []
+    msg: ''
   }),
   computed: {
+    comments: function() {
+      return this.$store.state.comment.all
+    },
     reversedComments: function() {
       return this.comments.slice().reverse()
     }
