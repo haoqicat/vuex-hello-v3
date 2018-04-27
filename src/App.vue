@@ -9,6 +9,7 @@ import Post from './components/Post'
 export default {
   created: function() {
     this.$store.dispatch({ type: 'loadComments' })
+    this.$store.dispatch({ type: 'loadPosts' })
   },
   components: {
     Post

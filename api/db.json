@@ -12,5 +12,15 @@
       "id": "3",
       "body": "dd"
     }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Git 技巧"
+    },
+    {
+      "id": "2",
+      "title": "React 技巧"
+    }
   ]
 }
