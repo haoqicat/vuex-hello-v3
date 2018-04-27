@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
-      <PostBody :title="postId" />
+      <PostBody :postId="postId" />
     </div>
     <div class="bottom">
       <CommentBox />

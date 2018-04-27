@@ -1,15 +1,21 @@
 <template>
   <div class="wrap">
     <div class="title">
-      {{ title }}
+      {{ post.title }}
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['title'],
-  name: 'PostBody'
+  props: ['postId'],
+  name: 'PostBody',
+  computed: {
+    post() {
+      const posts = this.$store.state.post.all
+      return posts.find(t => t.id === this.postId)
+    }
+  }
 }
 </script>
 
