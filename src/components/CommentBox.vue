@@ -31,7 +31,7 @@ export default {
         id: (this.comments.length + 1).toString(),
         body: this.msg
       }
-      this.$store.commit('addComment', comment)
+      this.$store.dispatch({ type: 'addComment', comment })
       this.msg = ''
     }
   }

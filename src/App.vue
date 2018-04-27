@@ -7,6 +7,9 @@
 <script>
 import Post from './components/Post'
 export default {
+  created: function() {
+    this.$store.dispatch({ type: 'loadComments' })
+  },
   components: {
     Post
   }
