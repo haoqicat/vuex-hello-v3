@@ -1,6 +1,8 @@
 <template>
   <div>
-    {{ posts }}
+    <div :key="post.id" v-for="post in posts">
+      <router-link :to="'post/' + post.id">{{ post.title }}</router-link>
+    </div>
   </div>
 </template>
 
