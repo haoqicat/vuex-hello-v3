@@ -6,8 +6,13 @@ const state = {
 
 const actions = {
   addComment({ commit }, { comment }) {
-    console.log('in action', comment)
-    commit('addComment', comment)
+    const uri = 'http://localhost:3008/comments'
+    axios.post(uri, comment).then(
+      res => {
+        console.log(res.data)
+        commit('addComment', comment)
+      }
+    )
   },
   loadComments({ commit }) {
     const uri = 'http://localhost:3008/comments'
