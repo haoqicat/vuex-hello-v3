@@ -17,8 +17,7 @@ export default {
       return posts.find(t => t.id === this.postId)
     },
     commentCount() {
-      const comments = this.$store.state.comment.all
-      return comments.filter(t => t.postId === this.postId).length
+      return this.$store.getters.getComments(this.postId).length
     },
     show() {
       return this.post

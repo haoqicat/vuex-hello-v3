@@ -7,22 +7,18 @@ const state = {
 const actions = {
   addComment({ commit }, { comment }) {
     const uri = 'http://localhost:3008/comments'
-    axios.post(uri, comment).then(
-      res => {
-        console.log(res.data)
-        commit('addComment', comment)
-      }
-    )
+    axios.post(uri, comment).then(res => {
+      console.log(res.data)
+      commit('addComment', comment)
+    })
   },
   loadComments({ commit }) {
     const uri = 'http://localhost:3008/comments'
-    axios.get(uri).then(
-      res => {
-        const comments = res.data
-        console.log(comments)
-        commit('loadComments', comments)
-      }
-    )
+    axios.get(uri).then(res => {
+      const comments = res.data
+      console.log(comments)
+      commit('loadComments', comments)
+    })
   }
 }
 
@@ -36,8 +32,15 @@ const mutations = {
   }
 }
 
+const getters = {
+  getComments: state => id => {
+    return state.all.filter(t => t.postId === id)
+  }
+}
+
 export default {
   state,
   mutations,
-  actions
+  actions,
+  getters
 }

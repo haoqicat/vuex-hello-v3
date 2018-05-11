@@ -20,8 +20,8 @@ export default {
   props: ['postId'],
   computed: {
     comments() {
-      const allComments = this.$store.state.comment.all
-      return allComments.filter(t => t.id === this.postId)
+      console.log('xxxx', this.postId)
+      return this.$store.getters.getComments(this.postId)
     },
     reversedComments() {
       return this.comments.slice().reverse()
