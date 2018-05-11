@@ -2,6 +2,7 @@
   <div class="wrap">
     <div v-if="show" class="title">
       {{ post.title }}
+      评论数：{{ commentCount }}
     </div>
   </div>
 </template>
@@ -14,6 +15,10 @@ export default {
     post() {
       const posts = this.$store.state.post.all
       return posts.find(t => t.id === this.postId)
+    },
+    commentCount() {
+      const comments = this.$store.state.comment.all
+      return comments.filter(t => t.postId === this.postId).length
     },
     show() {
       return this.post
