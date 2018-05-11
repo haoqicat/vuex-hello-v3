@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="comment-form">
       <input v-model="msg" placeholder="请填写评论" />
-      <button @click="handleClick">提交</button>
+      <button @click="handleClick">提交评论</button>
     </div>
    
     <div :key="comment.id" v-for="comment in reversedComments" >
@@ -45,6 +45,7 @@ export default {
   width: 400px;
   margin: 20px auto;
   padding: 10px;
+  line-height: 1.8;
 }
 
 .comment-form {

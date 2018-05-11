@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="title">
+    <div v-if="show" class="title">
       {{ post.title }}
     </div>
   </div>
@@ -14,6 +14,9 @@ export default {
     post() {
       const posts = this.$store.state.post.all
       return posts.find(t => t.id === this.postId)
+    },
+    show() {
+      return this.post
     }
   }
 }
