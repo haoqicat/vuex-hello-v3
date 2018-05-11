@@ -4,7 +4,7 @@
       <PostBody :postId="postId" />
     </div>
     <div class="bottom">
-      <CommentBox />
+      <CommentBox :postId="postId"/>
     </div>
   </div>
 </template>

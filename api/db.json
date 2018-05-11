@@ -2,23 +2,13 @@
   "comments": [
     {
       "id": "1",
-      "body": "评论1"
+      "body": "评论1",
+      "postId": "1"
     },
     {
       "id": "2",
-      "body": "评论2"
-    },
-    {
-      "id": "3",
-      "body": "dd"
-    },
-    {
-      "id": "4",
-      "body": "dfsd"
-    },
-    {
-      "id": "5",
-      "body": "sdfdsf"
+      "body": "评论2",
+      "postId": "2"
     }
   ],
   "posts": [

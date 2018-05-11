@@ -17,9 +17,11 @@ export default {
   data: () => ({
     msg: ''
   }),
+  props: ['postId'],
   computed: {
     comments() {
-      return this.$store.state.comment.all
+      const allComments = this.$store.state.comment.all
+      return allComments.filter(t => t.id === this.postId)
     },
     reversedComments() {
       return this.comments.slice().reverse()
